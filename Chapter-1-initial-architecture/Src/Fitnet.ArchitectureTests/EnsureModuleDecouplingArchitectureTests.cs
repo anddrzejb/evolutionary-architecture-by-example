@@ -45,7 +45,6 @@ public class EnsureModuleDecouplingArchitectureTests
                 namespaceName!.Count(c => c == '.') == baseNamespaceSegments &&
                 !namespaceName!.EndsWith(".Common", StringComparison.InvariantCulture) &&
                 !namespaceName!.EndsWith(".Migrations", StringComparison.InvariantCulture))
-            //.Select(primary => primary!.Split(".")[^1])
             .ToList();
 
         return filteredModuleNamespaces.SelectMany(
